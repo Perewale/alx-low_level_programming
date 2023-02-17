@@ -1,2 +1,2 @@
 #!/bin/bash
--o $CFILE -o Cisfun
+-0 $CFILE -0 cisfun
