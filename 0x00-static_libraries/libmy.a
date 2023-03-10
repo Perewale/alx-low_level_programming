@@ -1,0 +1,94 @@
+!<arch>
+0-memset.o/     0           0     0     644     428       `
+#include "main.h"
+
+/**
+ * _memset - function fill the first @n bytes of the memory area pointed
+ * to by @s with the constant byte @b
+ *
+ * @n: bytes of the memory area pointed to by @s
+ *
+ * @s: with the constant byte @b
+ *
+ * @b: memory area pointer
+ *
+ * Return: a pointer to the memory area @s
+ */
+char *_memset(char *s, char b, unsigned int n)
+{
+	unsigned int i = 0;
+
+	while (i < n)
+	{
+	s[i] = b;
+	i++;
+	}
+
+	return (s);
+}
+
+100-atoi.o/     0           0     0     644     452       `
+100-atoi.c
+
+#include "main.h"
+
+/**
+ * _atoi - Convert a string to an integer.
+ * @s: The pointer to convert
+ *
+ * Return: A integer
+ */
+int _atoi(char *s)
+{
+	int c = 0;
+	unsigned int ni = 0;
+	int min = 1;
+	int isi = 0;
+
+	while (s[c])
+	{
+		if (s[c] == 45)
+		{
+			min *= -1;
+		}
+
+		while (s[c] >= 48 && s[c] <= 57)
+		{
+			isi = 1;
+			ni = (ni * 10) + (s[c] - '0');
+			c++;
+		}
+
+		if (isi == 1)
+		{
+			break;
+		}
+
+		c++;
+	}
+
+	ni *= min;
+	return (ni);
+}
+
+
+9-strcpy.o/     0           0     0     644     291       `
+#include "main.h"
+/**
+ * _strcpy - copy the string pointed to by src to dest
+ * @dest: char to check
+ * @src: char to check
+ * Return: 0 is success
+ */
+char *_strcpy(char *dest, char *src)
+{
+	int a;
+
+	for (a = 0; src[a] != '\0'; a++)
+		dest[a] = src[a];
+	dest[a] = '\0';
+	return (dest);
+}
+
+
+
